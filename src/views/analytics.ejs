@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Data</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+   
+<h3><b>Analytics Data:</b></h3>
+<div>
+  <% if (URLS && URLS.length > 0) { %>  <!-- Correct EJS syntax for conditional -->
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Short ID</th>
+          <th>Redirect Link</th>
+          <th>Total Clicks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% URLS.forEach((URL, index) => { %>  <!-- Loop through URLs array -->
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= URL.ShortId %></td>
+            <td><a href="<%= URL.originalURL %>"><%= URL.originalURL %></a></td>  <!-- Make the original URL clickable -->
+            <td><%= URL.VisitHistory.length %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p>No data available.</p>  <!-- Fallback if URLS array is empty -->
+  <% } %>
+</div>
+
+</body>
+</html>

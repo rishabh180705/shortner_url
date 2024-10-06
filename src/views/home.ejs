@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortener URL</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    
+    <!-- Check if the 'id' is present -->
+    <% if (locals.id) { %>
+        <p> Shortened URL Generated: <a href="http://localhost:5000/url/<%= id %>" target="_blank">http://localhost:5000/url/<%= id %></a></p>
+    <% } %>
+    
+    <div>
+        <form method="post" action="/url">
+            <label><b>Enter your original URL:</b></label>
+            <input type="text" name="url" placeholder="https://example.com" required>
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+    
+    <!-- Link to analytics page -->
+    <a href="/analytics" target="_blank"><h3>Analytics Data:</h3></a>
+</body>
+</html>
