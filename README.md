@@ -2,7 +2,7 @@
 
 deployed link:https://shortner-url-8a48.onrender.com/
 
-URL Shortener with JWT Authentication and EJS for SSR
+<pre>```URL Shortener with JWT Authentication and EJS for SSR
 This project is a URL shortener application built using Node.js and Express, with JWT (JSON Web Tokens) for authentication and EJS (Embedded JavaScript) for server-side rendering (SSR). Users can sign up, log in, and shorten URLs, while authenticated users can access analytics about their shortened URLs.
 
 Features
@@ -19,10 +19,11 @@ MongoDB: Database to store user data and URL data.
 Mongoose: Object Data Modeling (ODM) library for MongoDB.
 EJS (Embedded JavaScript): Templating engine for server-side rendering.
 bcryptjs: Password hashing.
-dotenv: To manage environment variables.
-Project Structure
+dotenv: To manage environment variables.```</pre>
 
-/*
+<pre>```
+
+Project Structure
 ├── src
 │   ├── controllers     # Controller logic for handling requests
 │   ├── models          # Mongoose models for MongoDB collections
@@ -34,9 +35,9 @@ Project Structure
 ├── index.js            # Main entry point of the application
 └── package.json        # Project dependencies and scripts
 
-*/
+```</pre>
 
-
+```<pre>
 Installation and Setup
 Prerequisites
 Node.js (v14.x or above)
@@ -100,9 +101,9 @@ export function createToken(user) {
     expiresIn: '1h', // Token expires in 1 hour
   });
 }
+```</pre>
 
-
-
+<pre>```
 export function verifyToken(token) {
   return jwt.verify(token, process.env.JWT_SECRET);
 }
@@ -152,4 +153,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any feature requests or bugs.
-
+```</pre>
