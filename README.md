@@ -22,7 +22,7 @@ bcryptjs: Password hashing.
 dotenv: To manage environment variables.
 Project Structure
 
-.
+/*
 ├── src
 │   ├── controllers     # Controller logic for handling requests
 │   ├── models          # Mongoose models for MongoDB collections
@@ -33,6 +33,10 @@ Project Structure
 ├── .env                # Environment variables (MongoDB URL, JWT secrets, etc.)
 ├── index.js            # Main entry point of the application
 └── package.json        # Project dependencies and scripts
+
+*/
+
+
 Installation and Setup
 Prerequisites
 Node.js (v14.x or above)
