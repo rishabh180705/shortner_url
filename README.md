@@ -36,8 +36,8 @@ Project Structure
 └── package.json        # Project dependencies and scripts
 
 ```</pre>
-
-```<pre>
+<pre>
+```
 Installation and Setup
 Prerequisites
 Node.js (v14.x or above)
