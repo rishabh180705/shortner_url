@@ -57,12 +57,17 @@ MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/shortner_URL
 JWT_SECRET=your_jwt_secret_key
 Database Connection: Ensure your MongoDB instance is running, and the connection URL is provided in .env (MONGO_URI).
 
+
+
 Run the Server:
 
 npm run dev
 The server will start on the port specified in the .env file (default: 5000).
 
 Access the Application: Open your browser and go to http://localhost:5000/ to view the homepage.
+
+
+
 
 API Routes and Pages
 Public Routes
@@ -92,6 +97,8 @@ export function createToken(user) {
   });
 }
 
+
+
 export function verifyToken(token) {
   return jwt.verify(token, process.env.JWT_SECRET);
 }
@@ -111,9 +118,16 @@ async function shortenUrl(req, res) {
     createdBy: req.user._id,
   });
 
+
+
   await newUrl.save();
   res.redirect('/analytics');
 }
+
+
+
+
+
 3. Server-Side Rendering with EJS
 The EJS templates are used to render the pages, passing dynamic data (like URL analytics) from the server to the frontend.
 javascript
@@ -121,7 +135,10 @@ Copy code
 router.get('/analytics', restrictTOLoggedinUserOnly, async (req, res) => {
   const urls = await URL.find({ createdBy: req.user._id });
   res.render('analytics', { urls });
-});
+
+
+
+
 Future Enhancements
 Custom URL Slugs: Allow users to create custom slugs for shortened URLs.
 Rate Limiting: Implement rate limiting to prevent abuse of the URL shortening service.
