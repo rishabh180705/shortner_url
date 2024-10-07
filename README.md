@@ -3,7 +3,8 @@
 deployed link:https://shortner-url-8a48.onrender.com/
 
 <pre>```URL Shortener with JWT Authentication and EJS for SSR
-This project is a URL shortener application built using Node.js and Express, with JWT (JSON Web Tokens) for authentication and EJS (Embedded JavaScript) for server-side rendering (SSR). Users can sign up, log in, and shorten URLs, while authenticated users can access analytics about their shortened URLs.
+This project is a URL shortener application built using Node.js and Express, with JWT (JSON Web Tokens) for authentication and EJS (Embedded JavaScript) for server-side rendering (SSR). 
+Users can sign up, log in, and shorten URLs, while authenticated users can access analytics about their shortened URLs.
 
 Features
 User Authentication: Sign up, log in, and log out using JWT tokens stored in cookies.
